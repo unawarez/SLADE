@@ -116,9 +116,10 @@ void MapCanvas::draw()
 // -----------------------------------------------------------------------------
 void MapCanvas::mouseToCenter()
 {
-	auto rect   = GetScreenRect();
+	// ignoring screen x/y position because WarpPointer is relative to the window.
+	auto size   = GetSize();
 	mouse_warp_ = true;
-	sf::Mouse::setPosition(sf::Vector2i(rect.x + int(rect.width * 0.5), rect.y + int(rect.height * 0.5)));
+	WarpPointer(size.x / 2, size.y / 2);
 }
 
 // -----------------------------------------------------------------------------

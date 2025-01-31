@@ -43,3 +43,4 @@
 !/dist/makebuild.ps1
 
 CMakeSettings.json
+CMakeUserPresets.json
